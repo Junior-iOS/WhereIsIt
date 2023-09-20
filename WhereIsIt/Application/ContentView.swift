@@ -42,6 +42,11 @@ struct ContentView: View {
                             .onSubmit {
                                 isSearching = true
                             }
+                        
+                        List(mapItems, id: \.self) { mapItem in
+                            PlacesView(mapItem: mapItem)
+                        }
+                        
                         Spacer()
                     } // MARK: - VSTACK
                     .presentationDetents([.fraction(0.15), .medium, .large], selection: $selectedDetend)

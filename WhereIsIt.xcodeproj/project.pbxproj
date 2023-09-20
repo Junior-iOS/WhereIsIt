@@ -17,6 +17,7 @@
 		1474193B2AB37E0A00D94C56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1474193A2AB37E0A00D94C56 /* Preview Assets.xcassets */; };
 		147419432AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147419422AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift */; };
 		147419452AB3AFAC00D94C56 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147419442AB3AFAC00D94C56 /* LocationManager.swift */; };
+		14DA031F2ABB93DB00A9E9FC /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA031E2ABB93DB00A9E9FC /* PlacesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		1474193A2AB37E0A00D94C56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		147419422AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
 		147419442AB3AFAC00D94C56 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		14DA031E2ABB93DB00A9E9FC /* PlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		147419322AB37E0300D94C56 /* WhereIsIt */ = {
 			isa = PBXGroup;
 			children = (
+				14DA031D2ABB93CD00A9E9FC /* View */,
 				146791B32AB5673100C0A39B /* Supporting Files */,
 				146791AF2AB55E5300C0A39B /* SF Symbols */,
 				147419462AB3B30800D94C56 /* Manager */,
@@ -123,6 +126,14 @@
 				147419442AB3AFAC00D94C56 /* LocationManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		14DA031D2ABB93CD00A9E9FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14DA031E2ABB93DB00A9E9FC /* PlacesView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				147419452AB3AFAC00D94C56 /* LocationManager.swift in Sources */,
 				147419432AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift in Sources */,
 				146791B12AB55E6400C0A39B /* SFSymbols.swift in Sources */,
+				14DA031F2ABB93DB00A9E9FC /* PlacesView.swift in Sources */,
 				147419362AB37E0300D94C56 /* ContentView.swift in Sources */,
 				146791B52AB5673C00C0A39B /* MapOptions.swift in Sources */,
 				147419342AB37E0300D94C56 /* WhereIsItApp.swift in Sources */,
