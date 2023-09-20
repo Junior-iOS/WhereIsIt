@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146791AE2AB5541200C0A39B /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146791AD2AB5541100C0A39B /* MKCoordinateRegion+Extensions.swift */; };
+		146791B12AB55E6400C0A39B /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146791B02AB55E6400C0A39B /* SFSymbols.swift */; };
+		146791B52AB5673C00C0A39B /* MapOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146791B42AB5673C00C0A39B /* MapOptions.swift */; };
+		146791B72AB57CFD00C0A39B /* MapUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146791B62AB57CFD00C0A39B /* MapUtilities.swift */; };
 		147419342AB37E0300D94C56 /* WhereIsItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147419332AB37E0300D94C56 /* WhereIsItApp.swift */; };
 		147419362AB37E0300D94C56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147419352AB37E0300D94C56 /* ContentView.swift */; };
 		147419382AB37E0A00D94C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147419372AB37E0A00D94C56 /* Assets.xcassets */; };
 		1474193B2AB37E0A00D94C56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1474193A2AB37E0A00D94C56 /* Preview Assets.xcassets */; };
+		147419432AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147419422AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift */; };
+		147419452AB3AFAC00D94C56 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147419442AB3AFAC00D94C56 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		146791AD2AB5541100C0A39B /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
+		146791B02AB55E6400C0A39B /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		146791B42AB5673C00C0A39B /* MapOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapOptions.swift; sourceTree = "<group>"; };
+		146791B62AB57CFD00C0A39B /* MapUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUtilities.swift; sourceTree = "<group>"; };
 		147419302AB37E0300D94C56 /* WhereIsIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147419332AB37E0300D94C56 /* WhereIsItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereIsItApp.swift; sourceTree = "<group>"; };
 		147419352AB37E0300D94C56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		147419372AB37E0A00D94C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1474193A2AB37E0A00D94C56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		147419422AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extensions.swift"; sourceTree = "<group>"; };
+		147419442AB3AFAC00D94C56 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146791AF2AB55E5300C0A39B /* SF Symbols */ = {
+			isa = PBXGroup;
+			children = (
+				146791B02AB55E6400C0A39B /* SFSymbols.swift */,
+			);
+			path = "SF Symbols";
+			sourceTree = "<group>";
+		};
+		146791B22AB55F3800C0A39B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				147419332AB37E0300D94C56 /* WhereIsItApp.swift */,
+				147419352AB37E0300D94C56 /* ContentView.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		146791B32AB5673100C0A39B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				146791B42AB5673C00C0A39B /* MapOptions.swift */,
+				146791B62AB57CFD00C0A39B /* MapUtilities.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		147419272AB37E0300D94C56 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +89,11 @@
 		147419322AB37E0300D94C56 /* WhereIsIt */ = {
 			isa = PBXGroup;
 			children = (
-				147419332AB37E0300D94C56 /* WhereIsItApp.swift */,
-				147419352AB37E0300D94C56 /* ContentView.swift */,
+				146791B32AB5673100C0A39B /* Supporting Files */,
+				146791AF2AB55E5300C0A39B /* SF Symbols */,
+				147419462AB3B30800D94C56 /* Manager */,
+				147419412AB37F8E00D94C56 /* Extensions */,
+				146791B22AB55F3800C0A39B /* Application */,
 				147419372AB37E0A00D94C56 /* Assets.xcassets */,
 				147419392AB37E0A00D94C56 /* Preview Content */,
 			);
@@ -65,6 +106,23 @@
 				1474193A2AB37E0A00D94C56 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		147419412AB37F8E00D94C56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				147419422AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift */,
+				146791AD2AB5541100C0A39B /* MKCoordinateRegion+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		147419462AB3B30800D94C56 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				147419442AB3AFAC00D94C56 /* LocationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147419452AB3AFAC00D94C56 /* LocationManager.swift in Sources */,
+				147419432AB37FA600D94C56 /* CLLocationCoordinate2D+Extensions.swift in Sources */,
+				146791B12AB55E6400C0A39B /* SFSymbols.swift in Sources */,
 				147419362AB37E0300D94C56 /* ContentView.swift in Sources */,
+				146791B52AB5673C00C0A39B /* MapOptions.swift in Sources */,
 				147419342AB37E0300D94C56 /* WhereIsItApp.swift in Sources */,
+				146791AE2AB5541200C0A39B /* MKCoordinateRegion+Extensions.swift in Sources */,
+				146791B72AB57CFD00C0A39B /* MapUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +339,7 @@
 				DEVELOPMENT_TEAM = KTUAP2Z2QF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to find places near you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +369,7 @@
 				DEVELOPMENT_TEAM = KTUAP2Z2QF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to find places near you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
