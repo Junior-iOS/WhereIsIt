@@ -16,12 +16,25 @@ struct PlacesView: View {
         return getAddress(from: placemark)
     }
     
+    private var distance: Measurement<UnitLength>? {
+        guard let userLocation = LocationManager.shared.manager.location,
+              let destinationLocation = mapItem.placemark.location else {
+            return nil
+        }
+        
+        return MapUtilities.calculcateDistance(from: userLocation, to: destinationLocation)
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text(mapItem.name ?? "")
                 .font(.title3)
             Text(address)
                 .frame(maxWidth: .infinity, alignment: .leading)
+            
+            if let distance {
+                Text(distance, formatter: MeasurementFormatter.distance)
+            }
         }
     }
     
@@ -30,6 +43,7 @@ struct PlacesView: View {
     }
 }
 
-//#Preview {
-//    PlacesView()
-//}
+#Preview {
+    PlacesView(mapItem: PreviewMock.apple)
+        .padding()
+}

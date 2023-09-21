@@ -8,6 +8,11 @@
 import SwiftUI
 import MapKit
 
+enum DisplayMode {
+    case list
+    case detail
+}
+
 struct ContentView: View {
     @State private var locationManager = LocationManager.shared
     @State private var position: MapCameraPosition = .userLocation(fallback: .automatic)
@@ -16,11 +21,14 @@ struct ContentView: View {
     @State private var query: String = ""
     @State private var isSearching = false
     @State private var mapItems: [MKMapItem] = []
+    
+    @State private var selectedMapItem: MKMapItem?
     @State private var visibleRegion: MKCoordinateRegion?
+    @State private var displayMode: DisplayMode = .list
     
     var body: some View {
         ZStack {
-            Map(position: $position) {
+            Map(position: $position, selection: $selectedMapItem) {
                 ForEach(mapItems, id: \.self) { mapItem in
                     Marker(item: mapItem)
                 }
@@ -36,25 +44,27 @@ struct ContentView: View {
             }
                 .sheet(isPresented: .constant(true), content: {
                     VStack {
-                        TextField("Search", text: $query)
-                            .textFieldStyle(.roundedBorder)
-                            .padding()
-                            .onSubmit {
-                                isSearching = true
-                            }
-                        
-                        List(mapItems, id: \.self) { mapItem in
-                            PlacesView(mapItem: mapItem)
-                        }
-                        
                         Spacer()
-                    } // MARK: - VSTACK
-                    .presentationDetents([.fraction(0.15), .medium, .large], selection: $selectedDetend)
+                        switch displayMode {
+                        case .list:
+                            SearchBarView(search: $query, isSearching: $isSearching)
+                            PlaceListView(mapItems: mapItems)
+                        case .detail:
+                            Text("DETAIL")
+                        }
+                        Spacer()
+                    }
+                    .presentationDetents([.fraction(0.15), .medium, .large])
                     .presentationDragIndicator(.visible)
                     .presentationBackgroundInteraction(.enabled(upThrough: .medium))
                     .interactiveDismissDisabled()
             }) // MARK: - SHEET
         } // MARK: ZSTACK
+        
+        .onChange(of: selectedMapItem, {
+            displayMode = selectedMapItem != nil ? .detail : .list
+        })
+        
         .onMapCameraChange { context in
             visibleRegion = context.region
         }
