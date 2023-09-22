@@ -7,47 +7,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3B0AC7E5-155A-43F9-8608-A2C7636BD17B"
+            uuid = "7E608C7B-07A1-472B-A32A-09569284A0F9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WhereIsIt/Application/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "3B0AC7E5-155A-43F9-8608-A2C7636BD17B - b2a6ca135bb219b"
+                  uuid = "7E608C7B-07A1-472B-A32A-09569284A0F9 - 3988ea10ab524dd7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in WhereIsIt.ContentView.body.getter : some"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(WhereIsIt.SearchBarView, WhereIsIt.PlaceListView)&gt;, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;WhereIsIt.ActionButtons&gt;, &lt;&lt;opaque return type of SwiftUI.View.task&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(id: &#x3c4;_1_0, priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer)&gt; in closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.interactiveDismissDisabled(Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in WhereIsIt.ContentView.body.getter : some"
                   moduleName = "WhereIsIt"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juniorsilva/Projetos%20SwiftUI/WhereIsIt/WhereIsIt/Application/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "624">
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "316">
                </Location>
                <Location
-                  uuid = "3B0AC7E5-155A-43F9-8608-A2C7636BD17B - b2a6ca135bb219b"
+                  uuid = "7E608C7B-07A1-472B-A32A-09569284A0F9 - f76870e345fb09d5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in WhereIsIt.ContentView.body.getter : some"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(WhereIsIt.SearchBarView, WhereIsIt.PlaceListView)&gt;, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;WhereIsIt.ActionButtons&gt;, &lt;&lt;opaque return type of SwiftUI.View.task&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(id: &#x3c4;_1_0, priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer)&gt; in closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.interactiveDismissDisabled(Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in WhereIsIt.ContentView.body.getter : some"
                   moduleName = "WhereIsIt"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/juniorsilva/Projetos%20SwiftUI/WhereIsIt/WhereIsIt/Application/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "663">
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "7E608C7B-07A1-472B-A32A-09569284A0F9 - 6ff833d412acb7ca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(WhereIsIt.SearchBarView, WhereIsIt.PlaceListView)&gt;, SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;WhereIsIt.ActionButtons&gt;, &lt;&lt;opaque return type of SwiftUI.View.task&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(id: &#x3c4;_1_0, priority: Swift.TaskPriority, _: @Sendable () async -&gt; ()) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt;&gt;, SwiftUI.Spacer)&gt; in closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.interactiveDismissDisabled(Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.sheet&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, onDismiss: Swift.Optional&lt;() -&gt; ()&gt;, content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in WhereIsIt.ContentView.body.getter : some"
+                  moduleName = "WhereIsIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juniorsilva/Projetos%20SwiftUI/WhereIsIt/WhereIsIt/Application/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>

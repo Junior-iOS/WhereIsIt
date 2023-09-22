@@ -38,4 +38,12 @@ final class MapUtilities {
         let response = try? await directions.calculate()
         return response?.routes.first
     }
+    
+    static func makePhoneCall(_ number: String) {
+        if let url = URL(string: "tel://\(number)") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
 }

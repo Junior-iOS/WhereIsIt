@@ -24,6 +24,7 @@
 		14DA032A2ABBEBD000A9E9FC /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA03292ABBEBD000A9E9FC /* PlaceListView.swift */; };
 		14DA032C2ABBF3ED00A9E9FC /* MeasurementFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA032B2ABBF3ED00A9E9FC /* MeasurementFormatter+Extensions.swift */; };
 		14DA032E2ABC8F2200A9E9FC /* SelectedPlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA032D2ABC8F2200A9E9FC /* SelectedPlaceDetailView.swift */; };
+		14DA03302ABD33EB00A9E9FC /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DA032F2ABD33EB00A9E9FC /* ActionButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		14DA03292ABBEBD000A9E9FC /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
 		14DA032B2ABBF3ED00A9E9FC /* MeasurementFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		14DA032D2ABC8F2200A9E9FC /* SelectedPlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPlaceDetailView.swift; sourceTree = "<group>"; };
+		14DA032F2ABD33EB00A9E9FC /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				14DA03252ABBE3CC00A9E9FC /* SearchOptions.swift */,
 				14DA03272ABBE98B00A9E9FC /* SearchBarView.swift */,
 				14DA032D2ABC8F2200A9E9FC /* SelectedPlaceDetailView.swift */,
+				14DA032F2ABD33EB00A9E9FC /* ActionButtons.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				146791B52AB5673C00C0A39B /* MapOptions.swift in Sources */,
 				14DA032C2ABBF3ED00A9E9FC /* MeasurementFormatter+Extensions.swift in Sources */,
 				147419342AB37E0300D94C56 /* WhereIsItApp.swift in Sources */,
+				14DA03302ABD33EB00A9E9FC /* ActionButtons.swift in Sources */,
 				14DA032A2ABBEBD000A9E9FC /* PlaceListView.swift in Sources */,
 				146791AE2AB5541200C0A39B /* MKCoordinateRegion+Extensions.swift in Sources */,
 				14DA032E2ABC8F2200A9E9FC /* SelectedPlaceDetailView.swift in Sources */,

@@ -64,6 +64,10 @@ struct ContentView: View {
                             .padding()
                         
                         if selectedDetend == .medium || selectedDetend == .large {
+                            if let selectedMapItem {
+                                ActionButtons(mapItem: selectedMapItem)
+                            }
+                            
                             LookAroundPreview(initialScene: lookAroundScene)
                                 .task(id: selectedMapItem) {
                                     lookAroundScene = nil
@@ -74,7 +78,6 @@ struct ContentView: View {
                                     }
                                 }
                         }
-                        
                     }
                     Spacer()
                 }
