@@ -27,4 +27,15 @@ final class MapUtilities {
         let meters = firstLocation.distance(from: secondLocation)
         return Measurement(value: meters, unit: .meters)
     }
+    
+    static func calculateDirections(from firstLocation: MKMapItem, to secondLocation: MKMapItem) async throws -> MKRoute? {
+        let directionsRequest = MKDirections.Request()
+        directionsRequest.transportType = .automobile
+        directionsRequest.source = firstLocation
+        directionsRequest.destination = secondLocation
+        
+        let directions = MKDirections(request: directionsRequest)
+        let response = try? await directions.calculate()
+        return response?.routes.first
+    }
 }

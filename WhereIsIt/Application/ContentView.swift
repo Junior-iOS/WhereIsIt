@@ -20,11 +20,13 @@ struct ContentView: View {
     
     @State private var query: String = ""
     @State private var isSearching = false
-    @State private var mapItems: [MKMapItem] = []
     
+    @State private var mapItems: [MKMapItem] = []
     @State private var selectedMapItem: MKMapItem?
+    
     @State private var visibleRegion: MKCoordinateRegion?
     @State private var displayMode: DisplayMode = .list
+    @State private var lookAroundScene: MKLookAroundScene?
     
     var body: some View {
         ZStack {
@@ -48,9 +50,20 @@ struct ContentView: View {
                         switch displayMode {
                         case .list:
                             SearchBarView(search: $query, isSearching: $isSearching)
-                            PlaceListView(mapItems: mapItems)
+                            PlaceListView(mapItems: mapItems, selectedMapItem: $selectedMapItem)
                         case .detail:
-                            Text("DETAIL")
+                            SelectedPlaceDetailView(mapItem: $selectedMapItem)
+                                .padding()
+                            
+                            LookAroundPreview(initialScene: lookAroundScene)
+                                .task(id: selectedMapItem) {
+                                    lookAroundScene = nil
+                                    
+                                    if let selectedMapItem {
+                                        let request = MKLookAroundSceneRequest(mapItem: selectedMapItem)
+                                        lookAroundScene = try? await request.scene
+                                    }
+                                }
                         }
                         Spacer()
                     }
