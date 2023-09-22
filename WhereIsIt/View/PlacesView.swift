@@ -22,7 +22,7 @@ struct PlacesView: View {
             return nil
         }
         
-        return MapUtilities.calculcateDistance(from: userLocation, to: destinationLocation)
+        return MapUtilities.calculateDistance(from: userLocation, to: destinationLocation)
     }
     
     var body: some View {

@@ -3,4 +3,54 @@
    uuid = "A69D4623-1864-4CDC-A391-D578647F098C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B0AC7E5-155A-43F9-8608-A2C7636BD17B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhereIsIt/Application/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3B0AC7E5-155A-43F9-8608-A2C7636BD17B - b2a6ca135bb219b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in WhereIsIt.ContentView.body.getter : some"
+                  moduleName = "WhereIsIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juniorsilva/Projetos%20SwiftUI/WhereIsIt/WhereIsIt/Application/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "3B0AC7E5-155A-43F9-8608-A2C7636BD17B - b2a6ca135bb219b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in WhereIsIt.ContentView.body.getter : some"
+                  moduleName = "WhereIsIt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juniorsilva/Projetos%20SwiftUI/WhereIsIt/WhereIsIt/Application/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "663">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

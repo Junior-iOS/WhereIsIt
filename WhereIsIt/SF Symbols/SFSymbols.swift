@@ -15,4 +15,6 @@ enum SFSymbols: String {
     case bedDoubleFill = "bed.double.fill"
     case fuelPumpFill = "fuelpump.fill"
     case xmarkCircleFill = "xmark.circle.fill"
+    case phoneFill = "phone.fill"
+    case carCircleFill = "car.circle.fill"
 }

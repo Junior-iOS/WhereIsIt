@@ -104,12 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				14DA03202ABBA22600A9E9FC /* Mock */,
+				147419462AB3B30800D94C56 /* Manager */,
+				146791B22AB55F3800C0A39B /* Application */,
 				14DA031D2ABB93CD00A9E9FC /* View */,
 				146791B32AB5673100C0A39B /* Supporting Files */,
 				146791AF2AB55E5300C0A39B /* SF Symbols */,
-				147419462AB3B30800D94C56 /* Manager */,
 				147419412AB37F8E00D94C56 /* Extensions */,
-				146791B22AB55F3800C0A39B /* Application */,
 				147419372AB37E0A00D94C56 /* Assets.xcassets */,
 				147419392AB37E0A00D94C56 /* Preview Content */,
 			);

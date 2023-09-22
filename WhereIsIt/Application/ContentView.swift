@@ -28,6 +28,8 @@ struct ContentView: View {
     @State private var displayMode: DisplayMode = .list
     @State private var lookAroundScene: MKLookAroundScene?
     
+    @State private var route: MKRoute?
+    
     var body: some View {
         ZStack {
             Map(position: $position, selection: $selectedMapItem) {
@@ -35,6 +37,12 @@ struct ContentView: View {
                     Marker(item: mapItem)
                 }
                 UserAnnotation()
+                
+                // DRAW ROUTE LINE
+                if let route {
+                    MapPolyline(route)
+                        .stroke(.blue, lineWidth: 5)
+                }
             }
             .onChange(of: locationManager.region) {
                 position = .region(locationManager.region)
@@ -44,17 +52,18 @@ struct ContentView: View {
                 MapUserLocationButton()
                 MapScaleView()
             }
-                .sheet(isPresented: .constant(true), content: {
-                    VStack {
-                        Spacer()
-                        switch displayMode {
-                        case .list:
-                            SearchBarView(search: $query, isSearching: $isSearching)
-                            PlaceListView(mapItems: mapItems, selectedMapItem: $selectedMapItem)
-                        case .detail:
-                            SelectedPlaceDetailView(mapItem: $selectedMapItem)
-                                .padding()
-                            
+            .sheet(isPresented: .constant(true), content: {
+                VStack {
+                    Spacer()
+                    switch displayMode {
+                    case .list:
+                        SearchBarView(search: $query, isSearching: $isSearching)
+                        PlaceListView(mapItems: mapItems, selectedMapItem: $selectedMapItem)
+                    case .detail:
+                        SelectedPlaceDetailView(mapItem: $selectedMapItem)
+                            .padding()
+                        
+                        if selectedDetend == .medium || selectedDetend == .large {
                             LookAroundPreview(initialScene: lookAroundScene)
                                 .task(id: selectedMapItem) {
                                     lookAroundScene = nil
@@ -65,17 +74,26 @@ struct ContentView: View {
                                     }
                                 }
                         }
-                        Spacer()
+                        
                     }
-                    .presentationDetents([.fraction(0.15), .medium, .large])
-                    .presentationDragIndicator(.visible)
-                    .presentationBackgroundInteraction(.enabled(upThrough: .medium))
-                    .interactiveDismissDisabled()
+                    Spacer()
+                }
+                .presentationDetents([.fraction(0.15), .medium, .large], selection: $selectedDetend)
+                .presentationDragIndicator(.visible)
+                .presentationBackgroundInteraction(.enabled(upThrough: .medium))
+                .interactiveDismissDisabled()
             }) // MARK: - SHEET
         } // MARK: ZSTACK
         
         .onChange(of: selectedMapItem, {
-            displayMode = selectedMapItem != nil ? .detail : .list
+            if selectedMapItem != nil {
+                displayMode = .detail
+                calculateDirectionsRequest()
+            } else {
+                displayMode = .list
+                isSearching = false
+                route = nil
+            }
         })
         
         .onMapCameraChange { context in
@@ -96,6 +114,19 @@ struct ContentView: View {
         }
         
         isSearching = false
+    }
+    
+    private func calculateDirectionsRequest() {
+        route = nil
+        
+        if let selectedMapItem {
+            guard let userLocation = locationManager.manager.location else { return }
+            let startingMapItem = MKMapItem(placemark: MKPlacemark(coordinate: userLocation.coordinate))
+            
+            Task {
+                route = try await MapUtilities.calculateDirections(from: startingMapItem, to: selectedMapItem)
+            }
+        }
     }
 }
 

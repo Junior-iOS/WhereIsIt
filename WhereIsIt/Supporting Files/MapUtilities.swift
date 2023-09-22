@@ -23,7 +23,7 @@ final class MapUtilities {
         return response.mapItems
     }
     
-    static func calculcateDistance(from firstLocation: CLLocation, to secondLocation: CLLocation) -> Measurement<UnitLength> {
+    static func calculateDistance(from firstLocation: CLLocation, to secondLocation: CLLocation) -> Measurement<UnitLength> {
         let meters = firstLocation.distance(from: secondLocation)
         return Measurement(value: meters, unit: .meters)
     }
